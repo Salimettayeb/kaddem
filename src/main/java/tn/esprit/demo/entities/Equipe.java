@@ -7,6 +7,7 @@ import tn.esprit.demo.enums.Niveau;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Getter
@@ -24,6 +25,6 @@ public class Equipe implements Serializable {
     DetailEquipe detailEquipe;
 
     @ManyToMany(cascade = CascadeType.ALL,mappedBy = "equipes")
-    Etudiant etudiant;
+    private List<Etudiant> etudiants;
 
 }

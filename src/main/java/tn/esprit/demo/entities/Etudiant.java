@@ -6,7 +6,6 @@ import tn.esprit.demo.enums.Option;
 
 import javax.persistence.*;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Getter
