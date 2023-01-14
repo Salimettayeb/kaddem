@@ -1,6 +1,7 @@
 package tn.esprit.demo.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 import tn.esprit.demo.enums.Niveau;
@@ -23,8 +24,8 @@ public class Equipe implements Serializable {
 
     @OneToOne(cascade = CascadeType.ALL)
     DetailEquipe detailEquipe;
-
-    @ManyToMany(cascade = CascadeType.ALL,mappedBy = "equipes")
+    @JsonIgnore
+    @ManyToMany(cascade = CascadeType.ALL,mappedBy = "equipes",fetch = FetchType.EAGER)
     private List<Etudiant> etudiants;
 
 }

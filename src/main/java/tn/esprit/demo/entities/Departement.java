@@ -1,5 +1,6 @@
 package tn.esprit.demo.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,7 +20,7 @@ public class Departement implements Serializable {
 
     @ManyToOne(cascade = CascadeType.ALL)
     Universite universite;
-
+    @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL ,mappedBy = "departement")
     private List<Etudiant> etudiants;
 }
