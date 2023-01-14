@@ -19,4 +19,11 @@ public class Equipe implements Serializable {
 
     @Enumerated(EnumType.STRING)
     private Niveau niveau ;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    DetailEquipe detailEquipe;
+
+    @ManyToMany(cascade = CascadeType.ALL,mappedBy = "equipes")
+    Etudiant etudiant;
+
 }

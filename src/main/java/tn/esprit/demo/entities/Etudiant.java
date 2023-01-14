@@ -5,6 +5,8 @@ import lombok.Setter;
 import tn.esprit.demo.enums.Option;
 
 import javax.persistence.*;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -17,6 +19,17 @@ public class Etudiant {
     private String nom ;
     @Enumerated(EnumType.STRING)
     private Option optionEtudiant ;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    Departement departement;
+
+    @OneToMany(cascade = CascadeType.PERSIST,mappedBy = "etudiant")
+    private List<Contrat> contarts;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<Equipe> equipes;
+
+
 
 
 }
