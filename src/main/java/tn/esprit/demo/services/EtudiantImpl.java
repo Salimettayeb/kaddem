@@ -43,10 +43,8 @@ public class EtudiantImpl implements IEtudiantService{
 
 
     @Override
-    public Etudiant removeEtudiant(Integer idEtudiant) {
+    public void removeEtudiant(Integer idEtudiant) {
     iEtudiantRepository.deleteById(idEtudiant);
-
-        return null;
     }
 /*
     @Override

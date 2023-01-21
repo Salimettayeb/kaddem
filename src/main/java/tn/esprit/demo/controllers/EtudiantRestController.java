@@ -36,8 +36,8 @@ public class EtudiantRestController {
         return iEtudiantService.retrieveEtudiant(idEtudiant);
     }
     @DeleteMapping("/remove/{id}")
-    public Etudiant removeetudiant (@PathVariable("id") Integer idEtudiant) {
-        return  iEtudiantService.removeEtudiant(idEtudiant);
+    public void removeetudiant (@PathVariable("id") Integer idEtudiant) {
+          iEtudiantService.removeEtudiant(idEtudiant);
 
     }
     /*

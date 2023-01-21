@@ -12,8 +12,7 @@ public interface IEtudiantService {
     Etudiant  addEtudiant(Etudiant etudiant);
     Etudiant updateEtudiant(Etudiant etudiant);
     Etudiant retrieveEtudiant(Integer idEtudiant);
-
-    Etudiant removeEtudiant(Integer idEtudiant);
+    void removeEtudiant(Integer idEtudiant);
    /* List<Etudiant> findEtudiantByDepartement(String nomDepart);*/
    /* Etudiant addAndAssignEtudiantToEquipeAndContract(Etudiant etudiant, Integer idContrat, Integer
             idEquipe);
