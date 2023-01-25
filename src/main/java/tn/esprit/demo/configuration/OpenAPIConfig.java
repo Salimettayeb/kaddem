@@ -26,7 +26,7 @@ public class OpenAPIConfig {
     public GroupedOpenApi productPublicApi() {
         return GroupedOpenApi.builder()
                 .group("etudiant")
-                .pathsToMatch("/etudiant/**", "/equipe/**", "/universite/**", "/dep/**", "/contrat/**")
+                .pathsToMatch("/etudiant/**", "/equipe/**", "/department/**","/contrat/**")
                 .pathsToExclude("**")
                 .build();
 

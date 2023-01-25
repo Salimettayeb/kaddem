@@ -22,6 +22,7 @@ public class Equipe implements Serializable {
     @Enumerated(EnumType.STRING)
     private Niveau niveau ;
 
+    @JsonIgnore
     @OneToOne(cascade = CascadeType.ALL)
     DetailEquipe detailEquipe;
     @JsonIgnore
